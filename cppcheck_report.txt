@@ -1,0 +1,1673 @@
+hal/hifive1.c:363:13: style: The scope of the variable 'rx' can be reduced. [variableScope]
+    uint8_t rx;
+            ^
+hal/hifive1.c:388:13: style: The scope of the variable 'rx' can be reduced. [variableScope]
+    uint8_t rx;
+            ^
+hal/hifive1.c:219:31: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    while ((UART_REG_TXDATA & UART_TXFULL) != 0);
+                              ^
+hal/hifive1.c:228:20: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    } while ((ch & UART_RXEMPTY) != 0);
+                   ^
+hal/hifive1.c:313:31: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    while((FESPI_REG_TXDATA & FESPI_TXDATA_FIFO_FULL) != 0)
+                              ^
+hal/hifive1.c:323:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    } while ((reg & FESPI_RXDATA_FIFO_EMPTY) != 0);
+                    ^
+hal/hifive1.c:219:31: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    while ((UART_REG_TXDATA & UART_TXFULL) != 0);
+                              ^
+hal/hifive1.c:228:20: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    } while ((ch & UART_RXEMPTY) != 0);
+                   ^
+hal/hifive1.c:313:31: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    while((FESPI_REG_TXDATA & FESPI_TXDATA_FIFO_FULL) != 0)
+                              ^
+hal/hifive1.c:323:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    } while ((reg & FESPI_RXDATA_FIFO_EMPTY) != 0);
+                    ^
+hal/hifive1.c:349:8: style: Variable 'rx' is assigned a value that is never used. [unreadVariable]
+    rx = fespi_sw_rx();
+       ^
+hal/hifive1.c:371:12: style: Variable 'rx' is assigned a value that is never used. [unreadVariable]
+        rx = fespi_sw_rx();
+           ^
+hal/imx_rt.c:101:14: style: struct member '_FlexSpiXfer::baseAddress' is never used. [unusedStructMember]
+    uint32_t baseAddress;
+             ^
+hal/imx_rt.c:102:14: style: struct member '_FlexSpiXfer::seqId' is never used. [unusedStructMember]
+    uint32_t seqId;
+             ^
+hal/imx_rt.c:103:14: style: struct member '_FlexSpiXfer::seqNum' is never used. [unusedStructMember]
+    uint32_t seqNum;
+             ^
+hal/imx_rt.c:104:10: style: struct member '_FlexSpiXfer::isParallelModeEnable' is never used. [unusedStructMember]
+    bool isParallelModeEnable;
+         ^
+hal/imx_rt.c:105:15: style: struct member '_FlexSpiXfer::txBuffer' is never used. [unusedStructMember]
+    uint32_t *txBuffer;
+              ^
+hal/imx_rt.c:106:14: style: struct member '_FlexSpiXfer::txSize' is never used. [unusedStructMember]
+    uint32_t txSize;
+             ^
+hal/imx_rt.c:107:15: style: struct member '_FlexSpiXfer::rxBuffer' is never used. [unusedStructMember]
+    uint32_t *rxBuffer;
+              ^
+hal/imx_rt.c:108:14: style: struct member '_FlexSpiXfer::rxSize' is never used. [unusedStructMember]
+    uint32_t rxSize;
+             ^
+hal/imx_rt.c:118:22: style: struct member 'Anonymous1::max_freq' is never used. [unusedStructMember]
+            uint32_t max_freq : 4; /*  Maximum supported Frequency */
+                     ^
+hal/imx_rt.c:119:22: style: struct member 'Anonymous1::misc_mode' is never used. [unusedStructMember]
+            uint32_t misc_mode : 4; /* miscellaneous mode */
+                     ^
+hal/imx_rt.c:120:22: style: struct member 'Anonymous1::quad_mode_setting' is never used. [unusedStructMember]
+            uint32_t quad_mode_setting : 4; /* Quad mode setting */
+                     ^
+hal/imx_rt.c:121:22: style: struct member 'Anonymous1::cmd_pads' is never used. [unusedStructMember]
+            uint32_t cmd_pads : 4;  /* Command pads */
+                     ^
+hal/imx_rt.c:122:22: style: struct member 'Anonymous1::query_pads' is never used. [unusedStructMember]
+            uint32_t query_pads : 4;  /* SFDP read pads */
+                     ^
+hal/imx_rt.c:123:22: style: struct member 'Anonymous1::device_type' is never used. [unusedStructMember]
+            uint32_t device_type : 4; /* Device type */
+                     ^
+hal/imx_rt.c:124:22: style: struct member 'Anonymous1::option_size' is never used. [unusedStructMember]
+            uint32_t option_size : 4; /* Option size, in terms of uint32_t, size = (option_size + 1) * 4 */
+                     ^
+hal/imx_rt.c:133:22: style: struct member 'Anonymous3::dummy_cycles' is never used. [unusedStructMember]
+            uint32_t dummy_cycles : 8;  /* Dummy cycles before read */
+                     ^
+hal/imx_rt.c:134:22: style: struct member 'Anonymous3::reserved0' is never used. [unusedStructMember]
+            uint32_t reserved0 : 8;     /* Reserved for future use */
+                     ^
+hal/imx_rt.c:135:22: style: struct member 'Anonymous3::pinmux_group' is never used. [unusedStructMember]
+            uint32_t pinmux_group : 4;  /* The pinmux group selection */
+                     ^
+hal/imx_rt.c:136:22: style: struct member 'Anonymous3::reserved1' is never used. [unusedStructMember]
+            uint32_t reserved1 : 8;     /* Reserved for future use */
+                     ^
+hal/imx_rt.c:137:22: style: struct member 'Anonymous3::flash_connection' is never used. [unusedStructMember]
+            uint32_t flash_connection : 4; /* Flash connection option: 0 - Single Flash connected to port A */
+                     ^
+hal/imx_rt.c:127:18: style: union member 'Anonymous0::U' is never used. [unusedStructMember]
+        uint32_t U;
+                 ^
+hal/imx_rt.c:139:18: style: union member 'Anonymous2::U' is never used. [unusedStructMember]
+        uint32_t U;
+                 ^
+hal/library.c:179:9: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+    ret = wolfBoot_start();
+        ^
+hal/library.c:164:17: note: ret is assigned
+            ret = -1;
+                ^
+hal/library.c:179:9: note: ret is overwritten
+    ret = wolfBoot_start();
+        ^
+hal/library.c:179:9: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+    ret = wolfBoot_start();
+        ^
+hal/library.c:169:17: note: ret is assigned
+            ret = -2;
+                ^
+hal/library.c:179:9: note: ret is overwritten
+    ret = wolfBoot_start();
+        ^
+hal/lpc.c:110:14: style: The scope of the variable 'page_address' can be reduced. [variableScope]
+    uint32_t page_address;
+             ^
+hal/lpc.c:112:9: style: The scope of the variable 'size' can be reduced. [variableScope]
+    int size;
+        ^
+hal/nrf52.c:75:19: warning: The address of local variable 'val' might be accessed at non-zero index. [objectIndex]
+            vbytes[off] = data[i];
+                  ^
+hal/nrf52.c:71:43: note: Address of variable taken here.
+            uint8_t *vbytes = (uint8_t *)(&val);
+                                          ^
+hal/nrf52.c:75:19: note: The address of local variable 'val' might be accessed at non-zero index.
+            vbytes[off] = data[i];
+                  ^
+hal/nxp_p1021.c:795:14: style: The scope of the variable 'reg' can be reduced. [variableScope]
+    uint32_t reg;
+             ^
+hal/nxp_p1021.c:541:23: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    set32(LAWAR(idx), LAWAR_ENABLE | LAWAR_TRGT_ID(trgt_id) | law_sz);
+                      ^
+hal/nxp_p1021.c:541:23: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    set32(LAWAR(idx), LAWAR_ENABLE | LAWAR_TRGT_ID(trgt_id) | law_sz);
+                      ^
+hal/nxp_p1021.c:690:21: error: Signed integer overflow for expression '(0xFF&0xFF)<<(24-((0%4)*8))'. [integerOverflow]
+    set32(ELBC_FCR, ELBC_FCR_CMD(0, NAND_CMD_RESET));
+                    ^
+hal/nxp_p1021.c:706:21: error: Signed integer overflow for expression '(0x90&0xFF)<<(24-((0%4)*8))'. [integerOverflow]
+    set32(ELBC_FCR, ELBC_FCR_CMD(0, NAND_CMD_READ_ID));
+                    ^
+hal/nxp_p1021.c:1170:21: error: Signed integer overflow for expression '(12&0xF)<<(28-((0%8)*4))'. [integerOverflow]
+    set32(ELBC_FIR, ELBC_FIR_OP(0, ELBC_FIR_OP_CW0) |
+                    ^
+hal/nxp_p1021.c:1249:21: error: Signed integer overflow for expression '(12&0xF)<<(28-((0%8)*4))'. [integerOverflow]
+    set32(ELBC_FIR, ELBC_FIR_OP(0, ELBC_FIR_OP_CW0) |
+                    ^
+hal/nxp_p1021.c:1023:19: style: Variable 'pin_1bit_mask' is assigned a value that is never used. [unreadVariable]
+    pin_1bit_mask = (uint32_t)(1 << (NUM_OF_PINS - (pin + 1)));
+                  ^
+hal/nxp_p1021.c:1165:16: style: Variable 'block_size' is assigned a value that is never used. [unreadVariable]
+    block_size = (16 * 1024);
+               ^
+hal/nxp_t2080.c:396:16: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    LAWAR(3) = LAWAR_ENABLE | LAWAR_TRGT_ID(LAW_TRGT_BMAN) | LAW_SIZE_32MB;
+               ^
+hal/nxp_t2080.c:409:16: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    LAWAR(1) = LAWAR_ENABLE | LAWAR_TRGT_ID(LAW_TRGT_IFC) | LAW_SIZE_128MB;
+               ^
+hal/nxp_t2080.c:507:17: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    LAWAR (4) = LAWAR_ENABLE | LAWAR_TRGT_ID(LAW_TRGT_DDR_1) | LAW_SIZE_8GB;
+                ^
+hal/nxp_t2080.c:396:16: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    LAWAR(3) = LAWAR_ENABLE | LAWAR_TRGT_ID(LAW_TRGT_BMAN) | LAW_SIZE_32MB;
+               ^
+hal/nxp_t2080.c:409:16: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    LAWAR(1) = LAWAR_ENABLE | LAWAR_TRGT_ID(LAW_TRGT_IFC) | LAW_SIZE_128MB;
+               ^
+hal/nxp_t2080.c:507:17: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    LAWAR (4) = LAWAR_ENABLE | LAWAR_TRGT_ID(LAW_TRGT_DDR_1) | LAW_SIZE_8GB;
+                ^
+hal/psoc6.c:124:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+hal/psoc6.c:156:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+hal/renesas-ra.c:66:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = R_FLASH_HP_Open(&g_flash0_ctrl, &g_flash0_cfg);
+        ^
+hal/renesas-ra.c:65:9: note: err is assigned
+    err = R_FLASH_HP_Close(&g_flash0_ctrl);
+        ^
+hal/renesas-ra.c:66:9: note: err is overwritten
+    err = R_FLASH_HP_Open(&g_flash0_ctrl, &g_flash0_cfg);
+        ^
+hal/samr21.c:183:27: warning: The address of local variable 'val' might be accessed at non-zero index. [objectIndex]
+                    vbytes[off++] = data[i++];
+                          ^
+hal/samr21.c:176:43: note: Address of variable taken here.
+            uint8_t *vbytes = (uint8_t *)(&val);
+                                          ^
+hal/samr21.c:183:27: note: The address of local variable 'val' might be accessed at non-zero index.
+                    vbytes[off++] = data[i++];
+                          ^
+hal/sim.c:104:16: error: Pointer addition with NULL pointer. [nullPointerArithmetic]
+    memcpy(ptr + address, data, len);
+               ^
+hal/sim.c:101:20: note: Assignment 'ptr=0', assigned value is 0
+    uint8_t *ptr = 0;
+                   ^
+hal/sim.c:104:16: note: Null pointer addition
+    memcpy(ptr + address, data, len);
+               ^
+hal/sim.c:117:20: error: Pointer addition with NULL pointer. [nullPointerArithmetic]
+        memset(ptr + address, 0xEE, len);
+                   ^
+hal/sim.c:110:20: note: Assignment 'ptr=0', assigned value is 0
+    uint8_t *ptr = 0;
+                   ^
+hal/sim.c:117:20: note: Null pointer addition
+        memset(ptr + address, 0xEE, len);
+                   ^
+hal/sim.c:120:16: error: Pointer addition with NULL pointer. [nullPointerArithmetic]
+    memset(ptr + address, 0xff, len);
+               ^
+hal/sim.c:110:20: note: Assignment 'ptr=0', assigned value is 0
+    uint8_t *ptr = 0;
+                   ^
+hal/sim.c:114:17: note: Assuming condition is false
+    if (address == erasefail_address) {
+                ^
+hal/sim.c:120:16: note: Null pointer addition
+    memset(ptr + address, 0xff, len);
+               ^
+hal/sim.c:199:9: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+    ret = fexecve(fd, main_argv, envp);
+        ^
+hal/spi/spi_drv_stm32.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 29 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+hal/spi/spi_drv_stm32.c:47:0: information: Skipping configuration 'GPIOC_BASE;OCTOSPI_FLASH;QSPI_FLASH;SPI_FLASH;WOLFBOOT_TPM' since the value of 'GPIOC_BASE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    else if (base == GPIOC_BASE)
+^
+hal/spi/spi_drv_stm32.c:51:0: information: Skipping configuration 'GPIOD_BASE;OCTOSPI_FLASH;QSPI_FLASH;SPI_FLASH;WOLFBOOT_TPM' since the value of 'GPIOD_BASE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    else if (base == GPIOD_BASE)
+^
+hal/spi/spi_drv_stm32.c:55:0: information: Skipping configuration 'GPIOE_BASE;OCTOSPI_FLASH;QSPI_FLASH;SPI_FLASH;WOLFBOOT_TPM' since the value of 'GPIOE_BASE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    else if (base == GPIOE_BASE)
+^
+hal/spi/spi_drv_stm32.c:59:0: information: Skipping configuration 'GPIOF_BASE;OCTOSPI_FLASH;QSPI_FLASH;SPI_FLASH;WOLFBOOT_TPM' since the value of 'GPIOF_BASE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    else if (base == GPIOF_BASE)
+^
+hal/spi/spi_drv_stm32.c:63:0: information: Skipping configuration 'GPIOG_BASE;OCTOSPI_FLASH;QSPI_FLASH;SPI_FLASH;WOLFBOOT_TPM' since the value of 'GPIOG_BASE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    else if (base == GPIOG_BASE)
+^
+hal/spi/spi_drv_stm32.c:67:0: information: Skipping configuration 'GPIOH_BASE;OCTOSPI_FLASH;QSPI_FLASH;SPI_FLASH;WOLFBOOT_TPM' since the value of 'GPIOH_BASE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    else if (base == GPIOH_BASE)
+^
+hal/spi/spi_drv_stm32.c:71:0: information: Skipping configuration 'GPIOI_BASE;OCTOSPI_FLASH;QSPI_FLASH;SPI_FLASH;WOLFBOOT_TPM' since the value of 'GPIOI_BASE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    else if (base == GPIOI_BASE)
+^
+hal/spi/spi_drv_stm32.c:75:0: information: Skipping configuration 'GPIOJ_BASE;OCTOSPI_FLASH;QSPI_FLASH;SPI_FLASH;WOLFBOOT_TPM' since the value of 'GPIOJ_BASE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    else if (base == GPIOJ_BASE)
+^
+hal/spi/spi_drv_stm32.c:79:0: information: Skipping configuration 'GPIOK_BASE;OCTOSPI_FLASH;QSPI_FLASH;SPI_FLASH;WOLFBOOT_TPM' since the value of 'GPIOK_BASE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    else if (base == GPIOK_BASE)
+^
+hal/spi/spi_drv_stm32.c:91:37: warning: Either the condition 'pin<8' is redundant or there is signed integer overflow for expression '0xf<<(pin*4)'. [integerOverflowCond]
+            GPIO_AFL(base) &= ~(0xf << (pin * 4));
+                                    ^
+hal/spi/spi_drv_stm32.c:90:17: note: Assuming that condition 'pin<8' is not redundant
+        if (pin < 8)
+                ^
+hal/spi/spi_drv_stm32.c:91:37: note: Integer overflow
+            GPIO_AFL(base) &= ~(0xf << (pin * 4));
+                                    ^
+hal/spi/spi_drv_stm32.c:98:42: warning: Either the condition 'pin<8' is redundant or there is signed integer overflow for expression '0xf<<(pin*4)'. [integerOverflowCond]
+            reg = GPIO_AFL(base) & ~(0xf << (pin * 4));
+                                         ^
+hal/spi/spi_drv_stm32.c:97:17: note: Assuming that condition 'pin<8' is not redundant
+        if (pin < 8) {
+                ^
+hal/spi/spi_drv_stm32.c:98:42: note: Integer overflow
+            reg = GPIO_AFL(base) & ~(0xf << (pin * 4));
+                                         ^
+hal/spi/spi_drv_stm32.c:112:9: style: Variable 'reg' is assigned a value that is never used. [unreadVariable]
+    reg = GPIO_OSPD(base) & ~(0x03 << (pin * 2));
+        ^
+hal/spi/spi_drv_stm32.c:375:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+hal/stm32f4.c:194:17: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    FLASH_CR |= FLASH_CR_LOCK;
+                ^
+hal/stm32f4.c:201:17: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    FLASH_CR |= FLASH_CR_LOCK;
+                ^
+hal/stm32f4.c:194:17: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    FLASH_CR |= FLASH_CR_LOCK;
+                ^
+hal/stm32f4.c:201:17: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    FLASH_CR |= FLASH_CR_LOCK;
+                ^
+hal/stm32f7.c:264:17: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    FLASH_CR |= FLASH_CR_LOCK;
+                ^
+hal/stm32f7.c:271:17: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    FLASH_CR |= FLASH_CR_LOCK;
+                ^
+hal/stm32f7.c:264:17: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    FLASH_CR |= FLASH_CR_LOCK;
+                ^
+hal/stm32f7.c:271:17: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    FLASH_CR |= FLASH_CR_LOCK;
+                ^
+hal/stm32f7.c:248:14: style: Unused variable: val [unusedVariable]
+    uint32_t val;
+             ^
+hal/stm32g0.c:162:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    if ((FLASH_CR & FLASH_CR_LOCK) != 0) {
+                    ^
+hal/stm32g0.c:167:28: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        while ((FLASH_CR & FLASH_CR_LOCK) != 0)
+                           ^
+hal/stm32g0.c:175:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    if ((FLASH_CR & FLASH_CR_LOCK) == 0)
+                    ^
+hal/stm32g0.c:176:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        FLASH_CR |= FLASH_CR_LOCK;
+                    ^
+hal/stm32g0.c:162:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    if ((FLASH_CR & FLASH_CR_LOCK) != 0) {
+                    ^
+hal/stm32g0.c:167:28: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+        while ((FLASH_CR & FLASH_CR_LOCK) != 0)
+                           ^
+hal/stm32g0.c:175:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    if ((FLASH_CR & FLASH_CR_LOCK) == 0)
+                    ^
+hal/stm32g0.c:176:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+        FLASH_CR |= FLASH_CR_LOCK;
+                    ^
+hal/stm32h7.c:638:11: style: Variable 'reg32' is reassigned a value before the old one has been used. [redundantAssignment]
+    reg32 = PWR_D3CR;
+          ^
+hal/stm32h7.c:635:11: note: reg32 is assigned
+    reg32 = PWR_D3CR;
+          ^
+hal/stm32h7.c:638:11: note: reg32 is overwritten
+    reg32 = PWR_D3CR;
+          ^
+hal/stm32h7.c:382:17: style: Local variable 'off' shadows outer variable [shadowVariable]
+            int off = (address + i) - (((address + i) >> 5) << 5);
+                ^
+hal/stm32h7.c:358:9: note: Shadowed declaration
+    int off = (address + i) - (((address + i) >> 5) << 5);
+        ^
+hal/stm32h7.c:382:17: note: Shadow variable
+            int off = (address + i) - (((address + i) >> 5) << 5);
+                ^
+hal/stm32h7.c:383:22: style: Local variable 'base_addr' shadows outer variable [shadowVariable]
+            uint32_t base_addr = (address + i) & (~0x1F); /* aligned to 256 bit */
+                     ^
+hal/stm32h7.c:359:14: note: Shadowed declaration
+    uint32_t base_addr = (address + i) & (~0x1F); /* aligned to 256 bit */
+             ^
+hal/stm32h7.c:383:22: note: Shadow variable
+            uint32_t base_addr = (address + i) & (~0x1F); /* aligned to 256 bit */
+                     ^
+hal/stm32h7.c:354:19: style: Variable 'ii' is assigned a value that is never used. [unreadVariable]
+    int i = 0, ii =0;
+                  ^
+hal/stm32l0.c:117:19: warning: The address of local variable 'val' might be accessed at non-zero index. [objectIndex]
+            vbytes[off] = data[i];
+                  ^
+hal/stm32l0.c:113:43: note: Address of variable taken here.
+            uint8_t *vbytes = (uint8_t *)(&val);
+                                          ^
+hal/stm32l0.c:117:19: note: The address of local variable 'val' might be accessed at non-zero index.
+            vbytes[off] = data[i];
+                  ^
+hal/stm32l0.c:158:15: style: Variable 'start' is assigned a value that is never used. [unreadVariable]
+    int start = -1, end = -1;
+              ^
+hal/stm32l0.c:158:25: style: Variable 'end' is assigned a value that is never used. [unreadVariable]
+    int start = -1, end = -1;
+                        ^
+hal/stm32l4.c:88:14: style: Local variable 'PAGEError' shadows outer variable [shadowVariable]
+    uint32_t PAGEError = 0;
+             ^
+hal/stm32l4.c:32:30: note: Shadowed declaration
+static uint32_t Address = 0, PAGEError = 0;
+                             ^
+hal/stm32l4.c:88:14: note: Shadow variable
+    uint32_t PAGEError = 0;
+             ^
+hal/stm32l5.c:529:11: style: Variable 'reg32' is reassigned a value before the old one has been used. [redundantAssignment]
+    reg32 = RCC_CR;
+          ^
+hal/stm32l5.c:520:11: note: reg32 is assigned
+    reg32 = PWR_CR1;
+          ^
+hal/stm32l5.c:529:11: note: reg32 is overwritten
+    reg32 = RCC_CR;
+          ^
+hal/stm32l5.c:401:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    if ((FLASH_CR & FLASH_CR_LOCK) != 0) {
+                    ^
+hal/stm32l5.c:406:28: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        while ((FLASH_CR & FLASH_CR_LOCK) != 0)
+                           ^
+hal/stm32l5.c:416:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    if ((FLASH_CR & FLASH_CR_LOCK) == 0)
+                    ^
+hal/stm32l5.c:417:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        FLASH_CR |= FLASH_CR_LOCK;
+                    ^
+hal/stm32l5.c:428:28: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        while ((FLASH_CR & FLASH_CR_LOCK) != 0)
+                           ^
+hal/stm32l5.c:401:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    if ((FLASH_CR & FLASH_CR_LOCK) != 0) {
+                    ^
+hal/stm32l5.c:406:28: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+        while ((FLASH_CR & FLASH_CR_LOCK) != 0)
+                           ^
+hal/stm32l5.c:416:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    if ((FLASH_CR & FLASH_CR_LOCK) == 0)
+                    ^
+hal/stm32l5.c:417:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+        FLASH_CR |= FLASH_CR_LOCK;
+                    ^
+hal/stm32l5.c:428:28: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+        while ((FLASH_CR & FLASH_CR_LOCK) != 0)
+                           ^
+hal/stm32l5.c:674:12: style: Unused variable: pin [unusedVariable]
+  uint32_t pin;
+           ^
+hal/stm32l5.c:693:16: style: Variable 'r' is assigned a value that is never used. [unreadVariable]
+    uint32_t r = 0, w = 0;
+               ^
+hal/stm32l5.c:693:23: style: Variable 'w' is assigned a value that is never used. [unreadVariable]
+    uint32_t r = 0, w = 0;
+                      ^
+hal/stm32l5.c:694:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+hal/stm32l5_ns.c:323:11: style: Variable 'reg32' is reassigned a value before the old one has been used. [redundantAssignment]
+    reg32 = RCC_CR;
+          ^
+hal/stm32l5_ns.c:314:11: note: reg32 is assigned
+    reg32 = PWR_CR1;
+          ^
+hal/stm32l5_ns.c:323:11: note: reg32 is overwritten
+    reg32 = RCC_CR;
+          ^
+hal/stm32l5_ns.c:230:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    if ((FLASH_CR & FLASH_CR_LOCK) != 0) {
+                    ^
+hal/stm32l5_ns.c:235:28: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        while ((FLASH_CR & FLASH_CR_LOCK) != 0)
+                           ^
+hal/stm32l5_ns.c:244:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    if ((FLASH_CR & FLASH_CR_LOCK) == 0)
+                    ^
+hal/stm32l5_ns.c:245:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        FLASH_CR |= FLASH_CR_LOCK;
+                    ^
+hal/stm32l5_ns.c:230:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    if ((FLASH_CR & FLASH_CR_LOCK) != 0) {
+                    ^
+hal/stm32l5_ns.c:235:28: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+        while ((FLASH_CR & FLASH_CR_LOCK) != 0)
+                           ^
+hal/stm32l5_ns.c:244:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    if ((FLASH_CR & FLASH_CR_LOCK) == 0)
+                    ^
+hal/stm32l5_ns.c:245:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+        FLASH_CR |= FLASH_CR_LOCK;
+                    ^
+hal/stm32u5.c:523:11: style: Variable 'reg32' is reassigned a value before the old one has been used. [redundantAssignment]
+    reg32 = RCC_ICSCR1;
+          ^
+hal/stm32u5.c:519:11: note: reg32 is assigned
+    reg32 = PWR_VOSR;
+          ^
+hal/stm32u5.c:523:11: note: reg32 is overwritten
+    reg32 = RCC_ICSCR1;
+          ^
+hal/stm32u5.c:362:24: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    if ((FLASH_NS_CR & FLASH_CR_LOCK) != 0) {
+                       ^
+hal/stm32u5.c:367:31: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        while ((FLASH_NS_CR & FLASH_CR_LOCK) != 0)
+                              ^
+hal/stm32u5.c:379:25: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+     if ((FLASH_NS_CR & FLASH_CR_LOCK) == 0)
+                        ^
+hal/stm32u5.c:380:24: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        FLASH_NS_CR |= FLASH_CR_LOCK;
+                       ^
+hal/stm32u5.c:392:31: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        while ((FLASH_NS_CR & FLASH_CR_LOCK) != 0)
+                              ^
+hal/stm32u5.c:362:24: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    if ((FLASH_NS_CR & FLASH_CR_LOCK) != 0) {
+                       ^
+hal/stm32u5.c:367:31: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+        while ((FLASH_NS_CR & FLASH_CR_LOCK) != 0)
+                              ^
+hal/stm32u5.c:379:25: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+     if ((FLASH_NS_CR & FLASH_CR_LOCK) == 0)
+                        ^
+hal/stm32u5.c:380:24: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+        FLASH_NS_CR |= FLASH_CR_LOCK;
+                       ^
+hal/stm32u5.c:392:31: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+        while ((FLASH_NS_CR & FLASH_CR_LOCK) != 0)
+                              ^
+hal/stm32u5.c:524:22: error: Signed integer overflow for expression '0xF<<28'. [integerOverflow]
+    reg32 &= ~( (0xF << RCC_ICSCR1_MSIRANGE_SHIFT));
+                     ^
+hal/stm32u5.c:778:14: style: Unused variable: pin [unusedVariable]
+    uint32_t pin;
+             ^
+hal/stm32u5.c:794:16: style: Variable 'r' is assigned a value that is never used. [unreadVariable]
+    uint32_t r = 0, w = 0;
+               ^
+hal/stm32u5.c:794:23: style: Variable 'w' is assigned a value that is never used. [unreadVariable]
+    uint32_t r = 0, w = 0;
+                      ^
+hal/stm32u5.c:795:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+hal/stm32u5_ns.c:396:11: style: Variable 'reg32' is reassigned a value before the old one has been used. [redundantAssignment]
+    reg32 = RCC_ICSCR1;
+          ^
+hal/stm32u5_ns.c:392:11: note: reg32 is assigned
+    reg32 = PWR_VOSR;
+          ^
+hal/stm32u5_ns.c:396:11: note: reg32 is overwritten
+    reg32 = RCC_ICSCR1;
+          ^
+hal/stm32u5_ns.c:268:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    if ((FLASH_CR & FLASH_CR_LOCK) != 0) {
+                    ^
+hal/stm32u5_ns.c:273:28: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        while ((FLASH_CR & FLASH_CR_LOCK) != 0)
+                           ^
+hal/stm32u5_ns.c:281:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    if ((FLASH_CR & FLASH_CR_LOCK) == 0)
+                    ^
+hal/stm32u5_ns.c:282:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        FLASH_CR |= FLASH_CR_LOCK;
+                    ^
+hal/stm32u5_ns.c:268:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    if ((FLASH_CR & FLASH_CR_LOCK) != 0) {
+                    ^
+hal/stm32u5_ns.c:273:28: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+        while ((FLASH_CR & FLASH_CR_LOCK) != 0)
+                           ^
+hal/stm32u5_ns.c:281:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    if ((FLASH_CR & FLASH_CR_LOCK) == 0)
+                    ^
+hal/stm32u5_ns.c:282:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+        FLASH_CR |= FLASH_CR_LOCK;
+                    ^
+hal/stm32u5_ns.c:397:22: error: Signed integer overflow for expression '0xF<<28'. [integerOverflow]
+    reg32 &= ~( (0xF << RCC_ICSCR1_MSIRANGE_SHIFT));
+                     ^
+hal/stm32wb.c:147:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    if ((FLASH_CR & FLASH_CR_LOCK) != 0) {
+                    ^
+hal/stm32wb.c:152:28: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        while ((FLASH_CR & FLASH_CR_LOCK) != 0)
+                           ^
+hal/stm32wb.c:160:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    if ((FLASH_CR & FLASH_CR_LOCK) == 0)
+                    ^
+hal/stm32wb.c:161:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        FLASH_CR |= FLASH_CR_LOCK;
+                    ^
+hal/stm32wb.c:147:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    if ((FLASH_CR & FLASH_CR_LOCK) != 0) {
+                    ^
+hal/stm32wb.c:152:28: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+        while ((FLASH_CR & FLASH_CR_LOCK) != 0)
+                           ^
+hal/stm32wb.c:160:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+    if ((FLASH_CR & FLASH_CR_LOCK) == 0)
+                    ^
+hal/stm32wb.c:161:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+        FLASH_CR |= FLASH_CR_LOCK;
+                    ^
+hal/ti_hercules.c:120:9: style: The scope of the variable 'off' can be reduced. [variableScope]
+    int off = 0;
+        ^
+hal/ti_hercules.c:122:13: style: The scope of the variable 'temp' can be reduced. [variableScope]
+    uint8_t temp[WRITE_BLOCK_SIZE];
+            ^
+hal/ti_hercules.c:120:13: style: Variable 'off' is assigned a value that is never used. [unreadVariable]
+    int off = 0;
+            ^
+hal/ti_hercules.c:121:18: style: Variable 'blk_size' is assigned a value that is never used. [unreadVariable]
+    int blk_size = WRITE_BLOCK_SIZE;
+                 ^
+hal/ti_hercules.c:140:18: style: Variable 'blk_size' is assigned a value that is never used. [unreadVariable]
+        blk_size = WRITE_BLOCK_SIZE;
+                 ^
+hal/uart/uart_drv_lpc.c:100:13: style: Unused variable: ch [unusedVariable]
+    uint8_t ch;
+            ^
+hal/uart/uart_drv_stm32l0.c:161:11: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+    int i = 0;
+          ^
+hal/uart/uart_drv_stm32wb.c:78:29: error: Signed integer overflow for expression '0xf<<(7*4)'. [integerOverflow]
+    reg = GPIOB_AFL & ~(0xf << ((UART1_RX_PIN) * 4));
+                            ^
+hal/uart/uart_drv_stm32wb.c:105:14: style: Unused variable: reg [unusedVariable]
+    uint32_t reg;
+             ^
+hal/x86_64_efi.c:153:11: warning: Either the condition 'FileInfo==NULL' is redundant or there is possible null pointer dereference: FileInfo. [nullPointerRedundantCheck]
+    ret = FileInfo->FileSize;
+          ^
+hal/x86_64_efi.c:150:18: note: Assuming that condition 'FileInfo==NULL' is not redundant
+    if (FileInfo == NULL)
+                 ^
+hal/x86_64_efi.c:153:11: note: Null pointer dereference
+    ret = FileInfo->FileSize;
+          ^
+hal/x86_64_efi.c:250:14: style: Unused variable: mem [unusedVariable]
+    uint8_t *mem;
+             ^
+hal/x86_64_efi.c:251:12: style: Unused variable: size [unusedVariable]
+    UINT64 size;
+           ^
+hal/x86_64_efi.c:252:12: style: Unused variable: r [unusedVariable]
+    UINT64 r;
+           ^
+hal/zynq.c:884:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+hal/zynq.c:903:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+hal/zynq.c:969:14: style: Variable 'reg_cfg' is not assigned a value. [unassignedVariable]
+    uint32_t reg_cfg;
+             ^
+src/boot_aarch64.c:41:16: error: Comparing pointers that point to different objects [comparePointers]
+    while (dst < (unsigned int *)&__bss_end__) {
+               ^
+src/boot_aarch64.c:28:21: note: Variable declared here.
+extern unsigned int __bss_start__;
+                    ^
+src/boot_aarch64.c:40:11: note: Address of variable taken here.
+    dst = &__bss_start__;
+          ^
+src/boot_aarch64.c:29:21: note: Variable declared here.
+extern unsigned int __bss_end__;
+                    ^
+src/boot_aarch64.c:41:34: note: Address of variable taken here.
+    while (dst < (unsigned int *)&__bss_end__) {
+                                 ^
+src/boot_aarch64.c:41:16: note: Comparing pointers that point to different objects
+    while (dst < (unsigned int *)&__bss_end__) {
+               ^
+src/boot_arm.c:228:16: error: Comparing pointers that point to different objects [comparePointers]
+    while (dst < (unsigned int *)&_end_data) {
+               ^
+src/boot_arm.c:30:21: note: Variable declared here.
+extern unsigned int _start_data;
+                    ^
+src/boot_arm.c:227:28: note: Address of variable taken here.
+    dst = (unsigned int *) &_start_data;
+                           ^
+src/boot_arm.c:31:21: note: Variable declared here.
+extern unsigned int _end_data;
+                    ^
+src/boot_arm.c:228:34: note: Address of variable taken here.
+    while (dst < (unsigned int *)&_end_data) {
+                                 ^
+src/boot_arm.c:228:16: note: Comparing pointers that point to different objects
+    while (dst < (unsigned int *)&_end_data) {
+               ^
+src/boot_arm.c:236:16: error: Comparing pointers that point to different objects [comparePointers]
+    while (dst < (unsigned int *)&_end_bss) {
+               ^
+src/boot_arm.c:32:21: note: Variable declared here.
+extern unsigned int _start_bss;
+                    ^
+src/boot_arm.c:235:11: note: Address of variable taken here.
+    dst = &_start_bss;
+          ^
+src/boot_arm.c:33:21: note: Variable declared here.
+extern unsigned int _end_bss;
+                    ^
+src/boot_arm.c:236:34: note: Address of variable taken here.
+    while (dst < (unsigned int *)&_end_bss) {
+                                 ^
+src/boot_arm.c:236:16: note: Comparing pointers that point to different objects
+    while (dst < (unsigned int *)&_end_bss) {
+               ^
+src/boot_ppc.c:93:16: error: Comparing pointers that point to different objects [comparePointers]
+    while (dst < end) {
+               ^
+src/boot_ppc.c:32:21: note: Variable declared here.
+extern unsigned int _start_data;
+                    ^
+src/boot_ppc.c:91:26: note: Address of variable taken here.
+    dst = (unsigned int*)&_start_data;
+                         ^
+src/boot_ppc.c:33:21: note: Variable declared here.
+extern unsigned int _end_data;
+                    ^
+src/boot_ppc.c:92:26: note: Address of variable taken here.
+    end = (unsigned int*)&_end_data;
+                         ^
+src/boot_ppc.c:93:16: note: Comparing pointers that point to different objects
+    while (dst < end) {
+               ^
+src/boot_ppc.c:102:16: error: Comparing pointers that point to different objects [comparePointers]
+    while (dst < end) {
+               ^
+src/boot_ppc.c:29:21: note: Variable declared here.
+extern unsigned int __bss_start__;
+                    ^
+src/boot_ppc.c:100:26: note: Address of variable taken here.
+    dst = (unsigned int*)&__bss_start__;
+                         ^
+src/boot_ppc.c:30:21: note: Variable declared here.
+extern unsigned int __bss_end__;
+                    ^
+src/boot_ppc.c:101:26: note: Address of variable taken here.
+    end = (unsigned int*)&__bss_end__;
+                         ^
+src/boot_ppc.c:102:16: note: Comparing pointers that point to different objects
+    while (dst < end) {
+               ^
+src/boot_renesas.c:41:11: style: Unused variable: r1 [unusedVariable]
+    jmp   r1;
+          ^
+src/boot_renesas.c:46:13: style: Variable 'app_entry' is not assigned a value. [unassignedVariable]
+     void (*app_entry)(void);
+            ^
+src/boot_renesas.c:47:15: style: Variable 'app_sp' is not assigned a value. [unassignedVariable]
+     uint32_t app_sp;
+              ^
+src/boot_riscv.c:58:16: error: Comparing pointers that point to different objects [comparePointers]
+    while (dst < (uint32_t *)&_end_data) {
+               ^
+src/boot_riscv.c:32:18: note: Variable declared here.
+extern uint32_t  _start_data;
+                 ^
+src/boot_riscv.c:56:24: note: Address of variable taken here.
+    dst = (uint32_t *) &_start_data;
+                       ^
+src/boot_riscv.c:33:18: note: Variable declared here.
+extern uint32_t  _end_data;
+                 ^
+src/boot_riscv.c:58:30: note: Address of variable taken here.
+    while (dst < (uint32_t *)&_end_data) {
+                             ^
+src/boot_riscv.c:58:16: note: Comparing pointers that point to different objects
+    while (dst < (uint32_t *)&_end_data) {
+               ^
+src/boot_riscv.c:66:16: error: Comparing pointers that point to different objects [comparePointers]
+    while (dst < (uint32_t *)&_end_bss) {
+               ^
+src/boot_riscv.c:34:18: note: Variable declared here.
+extern uint32_t  _start_bss;
+                 ^
+src/boot_riscv.c:65:11: note: Address of variable taken here.
+    dst = &_start_bss;
+          ^
+src/boot_riscv.c:35:18: note: Variable declared here.
+extern uint32_t  _end_bss;
+                 ^
+src/boot_riscv.c:66:30: note: Address of variable taken here.
+    while (dst < (uint32_t *)&_end_bss) {
+                             ^
+src/boot_riscv.c:66:16: note: Comparing pointers that point to different objects
+    while (dst < (uint32_t *)&_end_bss) {
+               ^
+src/delta.c:187:9: style: The scope of the variable 'found' can be reduced. [variableScope]
+    int found;
+        ^
+src/image.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 32 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/image.c:779:12: style: Unused variable: idx [unusedVariable]
+    word32 idx;
+           ^
+src/image.c:833:10: warning: Possible null pointer dereference: magic [nullPointer]
+    if (*magic != WOLFBOOT_MAGIC) {
+         ^
+src/image.c:949:17: note: Assignment 'image=(uint8_t*)0', assigned value is 0
+        image = fetch_hdr_cpy(img);
+                ^
+src/image.c:954:45: note: Calling function 'wolfBoot_open_image_address', 2nd argument 'image' value is 0
+    return wolfBoot_open_image_address(img, image);
+                                            ^
+src/image.c:832:23: note: Assignment 'magic=(uint32_t*)(image)', assigned value is 0
+    uint32_t *magic = (uint32_t *)(image);
+                      ^
+src/image.c:833:10: note: Null pointer dereference
+    if (*magic != WOLFBOOT_MAGIC) {
+         ^
+src/image.c:876:17: warning: Possible null pointer dereference: dts_addr [nullPointer]
+    memcpy(hdr, dts_addr, 2 * sizeof(uint32_t));
+                ^
+src/image.c:921:21: note: Assignment 'image=(uint8_t*)0', assigned value is 0
+            image = fetch_hdr_cpy(img);
+                    ^
+src/image.c:924:37: note: Calling function 'wolfBoot_get_dts_size', 1st argument 'image' value is 0
+        ret = wolfBoot_get_dts_size(image);
+                                    ^
+src/image.c:876:17: note: Null pointer dereference
+    memcpy(hdr, dts_addr, 2 * sizeof(uint32_t));
+                ^
+src/image.c:276:19: style: Variable 'output_sz' is assigned a value that is never used. [unreadVariable]
+    int output_sz = sizeof(output);
+                  ^
+src/image.c:335:17: style: Variable 'res' is assigned a value that is never used. [unreadVariable]
+        int res = 0;
+                ^
+src/image.c:152:39: style: Condition '~(uint32_t)ret==0xFFFFFFFF' is always true [knownConditionTrueFalse]
+    if ((ret == 0) && (~(uint32_t)ret == 0xFFFFFFFF) && (verify_res == 1) &&
+                                      ^
+src/image.c:152:14: note: Assuming that condition 'ret==0' is not redundant
+    if ((ret == 0) && (~(uint32_t)ret == 0xFFFFFFFF) && (verify_res == 1) &&
+             ^
+src/image.c:152:39: note: Condition '~(uint32_t)ret==0xFFFFFFFF' is always true
+    if ((ret == 0) && (~(uint32_t)ret == 0xFFFFFFFF) && (verify_res == 1) &&
+                                      ^
+src/image.c:153:36: style: Condition '~(uint32_t)verify_res==0xFFFFFFFE' is always true [knownConditionTrueFalse]
+            (~(uint32_t)verify_res == 0xFFFFFFFE))
+                                   ^
+src/image.c:152:69: note: Assuming that condition 'verify_res==1' is not redundant
+    if ((ret == 0) && (~(uint32_t)ret == 0xFFFFFFFF) && (verify_res == 1) &&
+                                                                    ^
+src/image.c:153:36: note: Condition '~(uint32_t)verify_res==0xFFFFFFFE' is always true
+            (~(uint32_t)verify_res == 0xFFFFFFFE))
+                                   ^
+src/libwolfboot.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 33 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/libwolfboot.c:721:13: style: Redundant initialization for 'img_bin'. The initialized value is overwritten before it is read. [redundantInitialization]
+    img_bin = dec_hdr;
+            ^
+src/libwolfboot.c:715:22: note: img_bin is initialized
+    uint8_t *img_bin = blob;
+                     ^
+src/libwolfboot.c:721:13: note: img_bin is overwritten
+    img_bin = dec_hdr;
+            ^
+src/libwolfboot.c:744:13: style: Redundant initialization for 'img_bin'. The initialized value is overwritten before it is read. [redundantInitialization]
+    img_bin = dec_hdr;
+            ^
+src/libwolfboot.c:738:22: note: img_bin is initialized
+    uint8_t *img_bin = blob;
+                     ^
+src/libwolfboot.c:744:13: note: img_bin is overwritten
+    img_bin = dec_hdr;
+            ^
+src/libwolfboot.c:768:13: style: Redundant initialization for 'img_bin'. The initialized value is overwritten before it is read. [redundantInitialization]
+    img_bin = dec_hdr;
+            ^
+src/libwolfboot.c:762:22: note: img_bin is initialized
+    uint8_t *img_bin = blob;
+                     ^
+src/libwolfboot.c:768:13: note: img_bin is overwritten
+    img_bin = dec_hdr;
+            ^
+src/libwolfboot.c:703:9: style: Variable 'len' is assigned a value that is never used. [unreadVariable]
+    len = *((uint32_t*)(dec_hdr + sizeof(uint32_t)));
+        ^
+src/libwolfboot.c:939:13: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+    int ret = 0;
+            ^
+src/libwolfboot.c:940:17: style: Variable 'sel_sec' is assigned a value that is never used. [unreadVariable]
+    int sel_sec = 0;
+                ^
+src/libwolfboot.c:938:14: style: Unused variable: addr [unusedVariable]
+    uint32_t addr, addr_align, addr_off;
+             ^
+src/libwolfboot.c:938:20: style: Unused variable: addr_align [unusedVariable]
+    uint32_t addr, addr_align, addr_off;
+                   ^
+src/libwolfboot.c:938:32: style: Unused variable: addr_off [unusedVariable]
+    uint32_t addr, addr_align, addr_off;
+                               ^
+src/libwolfboot.c:1098:14: style: Unused variable: iv_local_ctr [unusedVariable]
+    uint32_t iv_local_ctr;
+             ^
+src/libwolfboot.c:1298:13: style: Unused variable: block [unusedVariable]
+    uint8_t block[ENCRYPT_BLOCK_SIZE];
+            ^
+src/libwolfboot.c:1302:14: style: Unused variable: magic [unusedVariable]
+    uint32_t magic, len;
+             ^
+src/libwolfboot.c:717:9: style: Condition '!encrypt_initialized' is always true [knownConditionTrueFalse]
+    if (!encrypt_initialized)
+        ^
+src/libwolfboot.c:740:9: style: Condition '!encrypt_initialized' is always true [knownConditionTrueFalse]
+    if (!encrypt_initialized)
+        ^
+src/libwolfboot.c:764:9: style: Condition '!encrypt_initialized' is always true [knownConditionTrueFalse]
+    if (!encrypt_initialized)
+        ^
+src/libwolfboot.c:1305:9: style: Condition '!encrypt_initialized' is always true [knownConditionTrueFalse]
+    if (!encrypt_initialized) {
+        ^
+src/libwolfboot.c:986:17: style: Variable 'sel_sec' is assigned a value that is never used. [unreadVariable]
+    int sel_sec = 0;
+                ^
+src/libwolfboot.c:1006:17: style: Variable 'sel_sec' is assigned a value that is never used. [unreadVariable]
+    int sel_sec = 0;
+                ^
+src/libwolfboot.c:1163:9: style: Condition '!encrypt_initialized' is always true [knownConditionTrueFalse]
+    if (!encrypt_initialized) {
+        ^
+src/libwolfboot.c:1232:9: style: Condition '!encrypt_initialized' is always true [knownConditionTrueFalse]
+    if (!encrypt_initialized) {
+        ^
+src/libwolfboot.c:1149:13: style: The scope of the variable 'enc_block' can be reduced. [variableScope]
+    uint8_t enc_block[ENCRYPT_BLOCK_SIZE];
+            ^
+src/libwolfboot.c:1219:15: style: Variable 'base_address' is not assigned a value. [unassignedVariable]
+    uintptr_t base_address;
+              ^
+src/qspi_flash.c:447:33: portability: 'data' is of type 'const void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+                (uint8_t*)(data + (page * FLASH_PAGE_SIZE)),
+                                ^
+src/qspi_flash.c:170:21: style: Variable 'status' is assigned a value that is never used. [unreadVariable]
+    uint32_t status = 0;
+                    ^
+src/qspi_flash.c:366:18: style: Variable 'idx' is assigned a value that is never used. [unreadVariable]
+    uint32_t idx = 0;
+                 ^
+src/qspi_flash.c:428:39: style: Variable 'idx' is assigned a value that is never used. [unreadVariable]
+    uint32_t xferSz, page, pages, idx = 0;
+                                      ^
+src/qspi_flash.c:489:19: style: Variable 'wait' is assigned a value that is never used. [unreadVariable]
+    uint32_t wait = 0;
+                  ^
+src/spi_flash.c:179:8: style: Variable 'b0' is assigned a value that is never used. [unreadVariable]
+    b0 = spi_read();
+       ^
+src/spi_flash.c:174:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+src/string.c:259:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+src/update_flash.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/update_flash.c:418:50: style: Condition '~(uint32_t)fallback_allowed==0xFFFFFFFE' is always true [knownConditionTrueFalse]
+                    (~(uint32_t)fallback_allowed == 0xFFFFFFFE)) ||
+                                                 ^
+src/update_flash.c:417:32: note: Assuming that condition 'fallback_allowed==1' is not redundant
+        if ( ((fallback_allowed==1) &&
+                               ^
+src/update_flash.c:418:50: note: Condition '~(uint32_t)fallback_allowed==0xFFFFFFFE' is always true
+                    (~(uint32_t)fallback_allowed == 0xFFFFFFFE)) ||
+                                                 ^
+src/update_flash.c:122:14: style: Same expression used in consecutive assignments of 'src_sector_offset' and 'dst_sector_offset'. [duplicateAssignExpression]
+    uint32_t src_sector_offset = (sector * WOLFBOOT_SECTOR_SIZE);
+             ^
+src/update_flash.c:123:14: note: Same expression used in consecutive assignments of 'src_sector_offset' and 'dst_sector_offset'.
+    uint32_t dst_sector_offset = (sector * WOLFBOOT_SECTOR_SIZE);
+             ^
+src/update_flash.c:122:14: note: Same expression used in consecutive assignments of 'src_sector_offset' and 'dst_sector_offset'.
+    uint32_t src_sector_offset = (sector * WOLFBOOT_SECTOR_SIZE);
+             ^
+src/update_flash.c:201:9: style: Unused variable: hdr_size [unusedVariable]
+    int hdr_size;
+        ^
+src/update_flash.c:204:14: style: Unused variable: ptr_len [unusedVariable]
+    uint16_t ptr_len;
+             ^
+src/update_flash.c:377:17: style: Variable 'inverse' is assigned a value that is never used. [unreadVariable]
+    int inverse = 0;
+                ^
+src/update_flash.c:68:21: style: The scope of the variable 'buffer' can be reduced. [variableScope]
+            uint8_t buffer[FLASHBUFFER_SIZE];
+                    ^
+src/update_flash.c:68:21: style: Local variable 'buffer' shadows outer variable [shadowVariable]
+            uint8_t buffer[FLASHBUFFER_SIZE];
+                    ^
+src/update_flash.c:41:16: note: Shadowed declaration
+static uint8_t buffer[FLASHBUFFER_SIZE];
+               ^
+src/update_flash.c:68:21: note: Shadow variable
+            uint8_t buffer[FLASHBUFFER_SIZE];
+                    ^
+src/update_ram.c:81:13: style: Suspicious condition (assignment + comparison); Clarify expression with parentheses. [clarifyCondition]
+            ((ret = wolfBoot_verify_integrity(&os_image) < 0)) ||
+            ^
+src/update_ram.c:41:21: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+    int active, ret = 0;
+                    ^
+src/update_ram.c:44:13: style: Unused variable: p_state [unusedVariable]
+    uint8_t p_state;
+            ^
+src/xmalloc.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 32 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+test-app/app_hifive1.c:52:23: warning: The address of local variable 'offset' might be accessed at non-zero index. [objectIndex]
+        uart_write(off[i]);
+                      ^
+test-app/app_hifive1.c:48:32: note: Address of variable taken here.
+    uint8_t *off = (uint8_t *)(&offset);
+                               ^
+test-app/app_hifive1.c:52:23: note: The address of local variable 'offset' might be accessed at non-zero index.
+        uart_write(off[i]);
+                      ^
+test-app/app_hifive1.c:70:19: style: Variable 'tlen' is assigned a value that is never used. [unreadVariable]
+    uint32_t tlen = 0;
+                  ^
+test-app/app_hifive1.c:72:22: style: Variable 'r_total' is assigned a value that is never used. [unreadVariable]
+    uint32_t r_total = 0;
+                     ^
+test-app/app_hifive1.c:73:22: style: Variable 'tot_len' is assigned a value that is never used. [unreadVariable]
+    uint32_t tot_len = 0;
+                     ^
+test-app/app_hifive1.c:74:23: style: Variable 'next_seq' is assigned a value that is never used. [unreadVariable]
+    uint32_t next_seq = 0;
+                      ^
+test-app/app_hifive1.c:71:23: style: Unused variable: recv_seq [unusedVariable]
+    volatile uint32_t recv_seq;
+                      ^
+test-app/app_kinetis.c:119:11: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+    int i = 0;
+          ^
+test-app/app_nrf52.c:91:27: warning: The address of local variable 'version' might be accessed at non-zero index. [objectIndex]
+        uart_write(v_array[i]);
+                          ^
+test-app/app_nrf52.c:82:35: note: Address of variable taken here.
+    uint8_t *v_array = (uint8_t *)&version;
+                                  ^
+test-app/app_nrf52.c:91:27: note: The address of local variable 'version' might be accessed at non-zero index.
+        uart_write(v_array[i]);
+                          ^
+test-app/app_nxp_p1021.c:31:11: style: Variable 'j' is assigned a value that is never used. [unreadVariable]
+    int j = 0;
+          ^
+test-app/app_nxp_p1021.c:32:11: style: Variable 'k' is assigned a value that is never used. [unreadVariable]
+    int k = 0;
+          ^
+test-app/app_nxp_t2080.c:31:11: style: Variable 'j' is assigned a value that is never used. [unreadVariable]
+    int j = 0;
+          ^
+test-app/app_nxp_t2080.c:32:11: style: Variable 'k' is assigned a value that is never used. [unreadVariable]
+    int k = 0;
+          ^
+test-app/app_stm32f4.c:183:23: warning: The address of local variable '_off' might be accessed at non-zero index. [objectIndex]
+        uart_write(off[i]);
+                      ^
+test-app/app_stm32f4.c:179:32: note: Address of variable taken here.
+    uint8_t *off = (uint8_t *)(&_off);
+                               ^
+test-app/app_stm32f4.c:183:23: note: The address of local variable '_off' might be accessed at non-zero index.
+        uart_write(off[i]);
+                      ^
+test-app/app_stm32f4.c:118:29: error: Signed integer overflow for expression '0xf<<(7*4)'. [integerOverflow]
+    reg = GPIOB_AFL & ~(0xf << ((UART1_RX_PIN) * 4));
+                            ^
+test-app/app_stm32f7.c:179:23: warning: The address of local variable '_off' might be accessed at non-zero index. [objectIndex]
+        uart_write(off[i]);
+                      ^
+test-app/app_stm32f7.c:175:32: note: Address of variable taken here.
+    uint8_t *off = (uint8_t *)(&_off);
+                               ^
+test-app/app_stm32f7.c:179:23: note: The address of local variable '_off' might be accessed at non-zero index.
+        uart_write(off[i]);
+                      ^
+test-app/app_stm32f7.c:214:27: warning: The address of local variable 'version' might be accessed at non-zero index. [objectIndex]
+        uart_write(v_array[i]);
+                          ^
+test-app/app_stm32f7.c:205:35: note: Address of variable taken here.
+    uint8_t *v_array = (uint8_t *)&version;
+                                  ^
+test-app/app_stm32f7.c:214:27: note: The address of local variable 'version' might be accessed at non-zero index.
+        uart_write(v_array[i]);
+                          ^
+test-app/app_stm32f7.c:201:14: style: The scope of the variable 'r_total' can be reduced. [variableScope]
+    uint32_t r_total = 0;
+             ^
+test-app/app_stm32f7.c:111:14: style: Unused variable: reg [unusedVariable]
+    uint32_t reg;
+             ^
+test-app/app_stm32f7.c:201:22: style: Variable 'r_total' is assigned a value that is never used. [unreadVariable]
+    uint32_t r_total = 0;
+                     ^
+test-app/app_stm32h7.c:386:26: style: Checking if unsigned expression 'firmware_version' is less than zero. [unsignedLessThanZero]
+    if (firmware_version <= 0)
+                         ^
+test-app/app_stm32l0.c:107:14: style: Unused variable: reg [unusedVariable]
+    uint32_t reg;
+             ^
+test-app/app_stm32l0.c:153:11: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+    int i = 0;
+          ^
+test-app/app_stm32l0.c:193:18: style: Unused variable: sz [unusedVariable]
+        uint32_t sz;
+                 ^
+test-app/app_stm32l5.c:67:9: style: Variable 'reg' is reassigned a value before the old one has been used. [redundantAssignment]
+    reg = GPIOG_MODER & ~(0x03 << (pin * 2));
+        ^
+test-app/app_stm32l5.c:64:9: note: reg is assigned
+    reg = RCC_AHB2_CLOCK_ER;
+        ^
+test-app/app_stm32l5.c:67:9: note: reg is overwritten
+    reg = GPIOG_MODER & ~(0x03 << (pin * 2));
+        ^
+test-app/app_stm32l5.c:87:9: style: Variable 'reg' is reassigned a value before the old one has been used. [redundantAssignment]
+    reg = GPIOD_MODER & ~(0x03 << (pin * 2));
+        ^
+test-app/app_stm32l5.c:85:9: note: reg is assigned
+    reg = RCC_AHB2_CLOCK_ER;
+        ^
+test-app/app_stm32l5.c:87:9: note: reg is overwritten
+    reg = GPIOD_MODER & ~(0x03 << (pin * 2));
+        ^
+test-app/app_stm32u5.c:65:9: style: Variable 'reg' is reassigned a value before the old one has been used. [redundantAssignment]
+    reg = GPIOH_MODER & ~(0x03 << (pin * 2));
+        ^
+test-app/app_stm32u5.c:58:9: note: reg is assigned
+    reg = RCC_AHB2ENR1_CLOCK_ER;
+        ^
+test-app/app_stm32u5.c:65:9: note: reg is overwritten
+    reg = GPIOH_MODER & ~(0x03 << (pin * 2));
+        ^
+test-app/app_stm32u5.c:85:9: style: Variable 'reg' is reassigned a value before the old one has been used. [redundantAssignment]
+    reg = GPIOH_MODER & ~(0x03 << (pin * 2));
+        ^
+test-app/app_stm32u5.c:83:9: note: reg is assigned
+    reg = RCC_AHB2ENR1_CLOCK_ER;
+        ^
+test-app/app_stm32u5.c:85:9: note: reg is overwritten
+    reg = GPIOH_MODER & ~(0x03 << (pin * 2));
+        ^
+test-app/led.c:47:32: error: Signed integer overflow for expression '0x03<<(15*2)'. [integerOverflow]
+    reg = GPIOD_MODE & ~ (0x03 << (LED_PIN * 2));
+                               ^
+test-app/led.c:48:27: error: Signed integer overflow for expression '2<<(15*2)'. [integerOverflow]
+    GPIOD_MODE = reg | (2 << (LED_PIN * 2));
+                          ^
+test-app/led.c:50:31: error: Signed integer overflow for expression '0x03<<(15*2)'. [integerOverflow]
+    reg = GPIOD_OSPD & ~(0x03 << (LED_PIN * 2));
+                              ^
+test-app/led.c:51:30: error: Signed integer overflow for expression '0x03<<(15*2)'. [integerOverflow]
+    GPIOD_OSPD = reg | (0x03 << (LED_PIN * 2));
+                             ^
+test-app/led.c:53:31: error: Signed integer overflow for expression '0x03<<(15*2)'. [integerOverflow]
+    reg = GPIOD_PUPD & ~(0x03 <<  (LED_PIN * 2));
+                              ^
+test-app/led.c:54:30: error: Signed integer overflow for expression '0x02<<(15*2)'. [integerOverflow]
+    GPIOD_PUPD = reg | (0x02 << (LED_PIN * 2));
+                             ^
+test-app/led.c:57:29: error: Signed integer overflow for expression '0xf<<((15-8)*4)'. [integerOverflow]
+    reg = GPIOD_AFH & ~(0xf << ((LED_PIN - 8) * 4));
+                            ^
+test-app/led.c:179:14: style: Unused variable: reg [unusedVariable]
+    uint32_t reg;
+             ^
+test-app/startup_arm.c:51:16: error: Comparing pointers that point to different objects [comparePointers]
+    while (dst < (unsigned int *)&_end_data) {
+               ^
+test-app/startup_arm.c:25:21: note: Variable declared here.
+extern unsigned int _start_data;
+                    ^
+test-app/startup_arm.c:50:28: note: Address of variable taken here.
+    dst = (unsigned int *) &_start_data;
+                           ^
+test-app/startup_arm.c:26:21: note: Variable declared here.
+extern unsigned int _end_data;
+                    ^
+test-app/startup_arm.c:51:34: note: Address of variable taken here.
+    while (dst < (unsigned int *)&_end_data) {
+                                 ^
+test-app/startup_arm.c:51:16: note: Comparing pointers that point to different objects
+    while (dst < (unsigned int *)&_end_data) {
+               ^
+test-app/startup_arm.c:58:16: error: Comparing pointers that point to different objects [comparePointers]
+    while (dst < (unsigned int *)&_end_bss) {
+               ^
+test-app/startup_arm.c:27:21: note: Variable declared here.
+extern unsigned int _start_bss;
+                    ^
+test-app/startup_arm.c:57:11: note: Address of variable taken here.
+    dst = &_start_bss;
+          ^
+test-app/startup_arm.c:28:21: note: Variable declared here.
+extern unsigned int _end_bss;
+                    ^
+test-app/startup_arm.c:58:34: note: Address of variable taken here.
+    while (dst < (unsigned int *)&_end_bss) {
+                                 ^
+test-app/startup_arm.c:58:16: note: Comparing pointers that point to different objects
+    while (dst < (unsigned int *)&_end_bss) {
+               ^
+test-app/startup_arm.c:63:29: error: Subtracting pointers that point to different objects [comparePointers]
+    avail_mem = &_end_stack - &_start_heap;
+                            ^
+test-app/startup_arm.c:29:21: note: Variable declared here.
+extern unsigned int _end_stack;
+                    ^
+test-app/startup_arm.c:63:17: note: Address of variable taken here.
+    avail_mem = &_end_stack - &_start_heap;
+                ^
+test-app/startup_arm.c:30:21: note: Variable declared here.
+extern unsigned int _start_heap;
+                    ^
+test-app/startup_arm.c:63:31: note: Address of variable taken here.
+    avail_mem = &_end_stack - &_start_heap;
+                              ^
+test-app/startup_arm.c:63:29: note: Subtracting pointers that point to different objects
+    avail_mem = &_end_stack - &_start_heap;
+                            ^
+test-app/startup_riscv.c:50:16: error: Comparing pointers that point to different objects [comparePointers]
+    while (dst < (uint32_t *)&_end_data) {
+               ^
+test-app/startup_riscv.c:29:18: note: Variable declared here.
+extern uint32_t  _start_data;
+                 ^
+test-app/startup_riscv.c:48:24: note: Address of variable taken here.
+    dst = (uint32_t *) &_start_data;
+                       ^
+test-app/startup_riscv.c:30:18: note: Variable declared here.
+extern uint32_t  _end_data;
+                 ^
+test-app/startup_riscv.c:50:30: note: Address of variable taken here.
+    while (dst < (uint32_t *)&_end_data) {
+                             ^
+test-app/startup_riscv.c:50:16: note: Comparing pointers that point to different objects
+    while (dst < (uint32_t *)&_end_data) {
+               ^
+test-app/startup_riscv.c:58:16: error: Comparing pointers that point to different objects [comparePointers]
+    while (dst < (uint32_t *)&_end_bss) {
+               ^
+test-app/startup_riscv.c:31:18: note: Variable declared here.
+extern uint32_t  _start_bss;
+                 ^
+test-app/startup_riscv.c:57:11: note: Address of variable taken here.
+    dst = &_start_bss;
+          ^
+test-app/startup_riscv.c:32:18: note: Variable declared here.
+extern uint32_t  _end_bss;
+                 ^
+test-app/startup_riscv.c:58:30: note: Address of variable taken here.
+    while (dst < (uint32_t *)&_end_bss) {
+                             ^
+test-app/startup_riscv.c:58:16: note: Comparing pointers that point to different objects
+    while (dst < (uint32_t *)&_end_bss) {
+               ^
+test-app/timer.c:117:14: style: The scope of the variable 'err' can be reduced. [variableScope]
+    uint32_t err = 0;
+             ^
+tools/bin-assemble/bin-assemble.c:82:15: style: Variable 'nr' is assigned a value that is never used. [unreadVariable]
+    size_t nr = 0;
+              ^
+tools/bin-assemble/bin-assemble.c:83:15: style: Variable 'nw' is assigned a value that is never used. [unreadVariable]
+    size_t nw = 0;
+              ^
+tools/delta/bmdiff.c:43:19: style: The scope of the variable 'fd3' can be reduced. [variableScope]
+    int fd1, fd2, fd3;
+                  ^
+tools/delta/bmdiff.c:148:29: portability: 'base' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+                memcpy(base + len3, dest, r);
+                            ^
+tools/keytools/keygen.c:275:5: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+    printf("Public key slot:       %u\n", id_slot);
+    ^
+tools/keytools/keygen.c:652:5: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+    fprintf(fpub, Store_hdr, n_pubkeys);
+    ^
+tools/keytools/keygen.c:462:19: warning: scanf() without field width limits can crash with huge input data. [invalidscanf]
+        replySz = scanf("%s", reply);
+                  ^
+tools/keytools/keygen.c:667:13: warning: Either the condition 'fpub' is redundant or there is possible null pointer dereference: fpub. [nullPointerRedundantCheck]
+    fprintf(fpub, Keystore_API);
+            ^
+tools/keytools/keygen.c:668:9: note: Assuming that condition 'fpub' is not redundant
+    if (fpub)
+        ^
+tools/keytools/keygen.c:667:13: note: Null pointer dereference
+    fprintf(fpub, Keystore_API);
+            ^
+tools/keytools/keygen.c:517:9: style: The scope of the variable 'initRet' can be reduced. [variableScope]
+    int initRet = 0;
+        ^
+tools/keytools/keygen.c:517:17: style: Variable 'initRet' is assigned a value that is never used. [unreadVariable]
+    int initRet = 0;
+                ^
+tools/keytools/keygen.c:100:0: information: Skipping configuration 'PATH_MAX' since the value of 'PATH_MAX' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+char pubkeyfile[PATH_MAX]= "src/keystore.c";
+^
+tools/keytools/keygen.c:101:0: information: Skipping configuration 'PATH_MAX' since the value of 'PATH_MAX' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+char pubkeyimg[PATH_MAX] = "keystore.der";
+^
+tools/keytools/sign.c:242:1: error: Unmatched '{'. Configuration: ''. [syntaxError]
+{
+^
+tools/keytools/sign.c:242:1: error: Unmatched '{'. Configuration: 'DEBUG_SIGNTOOL'. [syntaxError]
+{
+^
+tools/keytools/sign.c:242:1: error: Unmatched '{'. Configuration: 'DEBUG_SIGTOOL'. [syntaxError]
+{
+^
+tools/keytools/sign.c:242:1: error: Unmatched '{'. Configuration: 'HAVE_CHACHA'. [syntaxError]
+{
+^
+tools/keytools/sign.c:346:9: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+        printf("Error: key size '%d' does not match any cipher\n",
+        ^
+tools/keytools/sign.c:1417:5: warning: %hu in format string (no. 1) requires 'unsigned short' but the argument type is 'unsigned char'. [invalidPrintfArgType_uint]
+    printf("Target partition id : %hu ", CMD.partition_id);
+    ^
+tools/keytools/sign.c:972:16: warning: Either the condition '!fef' is redundant or there is possible null pointer dereference: fef. [nullPointerRedundantCheck]
+        fclose(fef);
+               ^
+tools/keytools/sign.c:929:13: note: Assuming that condition '!fef' is not redundant
+        if (!fef) {
+            ^
+tools/keytools/sign.c:972:16: note: Null pointer dereference
+        fclose(fef);
+               ^
+tools/keytools/sign.c:943:13: style:inconclusive: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+            wc_Chacha_SetKey(&cha, key, sizeof(key));
+            ^
+tools/keytools/sign.c:888:17: style: Local variable 'key' shadows outer variable [shadowVariable]
+        uint8_t key[ENC_MAX_KEY_SZ], iv[ENC_MAX_IV_SZ];
+                ^
+tools/keytools/sign.c:204:3: note: Shadowed declaration
+} key;
+  ^
+tools/keytools/sign.c:888:17: note: Shadow variable
+        uint8_t key[ENC_MAX_KEY_SZ], iv[ENC_MAX_IV_SZ];
+                ^
+tools/keytools/sign.c:226:14: style: struct member 'cmd_options::pubkey_sz' is never used. [unusedStructMember]
+    uint32_t pubkey_sz;
+             ^
+tools/keytools/sign.c:242:1: error: Unmatched '{'. Configuration: 'HAVE_ED25519'. [syntaxError]
+{
+^
+tools/keytools/sign.c:242:1: error: Unmatched '{'. Configuration: 'HAVE_ED448'. [syntaxError]
+{
+^
+tools/keytools/sign.c:223:0: information: Skipping configuration 'PATH_MAX;_WIN32' since the value of 'PATH_MAX' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    char output_image_file[PATH_MAX];
+^
+tools/keytools/sign.c:224:0: information: Skipping configuration 'PATH_MAX;_WIN32' since the value of 'PATH_MAX' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    char output_diff_file[PATH_MAX];
+^
+tools/keytools/sign.c:225:0: information: Skipping configuration 'PATH_MAX;_WIN32' since the value of 'PATH_MAX' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    char output_encrypted_image_file[PATH_MAX];
+^
+tools/keytools/sign.c:242:1: error: Unmatched '{'. Configuration: 'WOLFSSL_SHA3'. [syntaxError]
+{
+^
+tools/keytools/sign.c:242:1: error: Unmatched '{'. Configuration: '_WIN32'. [syntaxError]
+{
+^
+tools/test-expect-version/test-expect-version.c:125:5: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+    printf("%d\n", ver);
+    ^
+tools/test-expect-version/test-expect-version.c:127:5: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+    fprintf(stderr, "ver: %d\n", ver);
+    ^
+tools/test-expect-version/test-expect-version.c:72:9: style: The scope of the variable 'res' can be reduced. [variableScope]
+    int res, serialfd;
+        ^
+tools/test-update-server/server.c:201:9: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+        printf("Sent image file size (%d)\n", tot_len);
+        ^
+tools/test-update-server/server.c:232:17: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                printf("Sent bytes: %d/%d  %02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x                \r",
+                ^
+tools/test-update-server/server.c:232:17: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                printf("Sent bytes: %d/%d  %02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x                \r",
+                ^
+tools/test-update-server/server.c:81:9: style: The scope of the variable 'res' can be reduced. [variableScope]
+    int res;
+        ^
+tools/uart-flash-server/ufserver.c:266:26: warning: The address of local variable 'address' might be accessed at non-zero index. [objectIndex]
+        ret = read(ud, &b[i], 1);
+                         ^
+tools/uart-flash-server/ufserver.c:279:22: note: Address of variable taken here.
+    if (read_word(ud,&address) != 4)
+                     ^
+tools/uart-flash-server/ufserver.c:279:22: note: Calling function 'read_word', 2nd argument '&address' value is lifetime=address
+    if (read_word(ud,&address) != 4)
+                     ^
+tools/uart-flash-server/ufserver.c:266:26: note: The address of local variable 'address' might be accessed at non-zero index.
+        ret = read(ud, &b[i], 1);
+                         ^
+tools/uart-flash-server/ufserver.c:266:26: warning: The address of local variable 'len' might be accessed at non-zero index. [objectIndex]
+        ret = read(ud, &b[i], 1);
+                         ^
+tools/uart-flash-server/ufserver.c:281:22: note: Address of variable taken here.
+    if (read_word(ud,&len) != 4)
+                     ^
+tools/uart-flash-server/ufserver.c:281:22: note: Calling function 'read_word', 2nd argument '&len' value is lifetime=len
+    if (read_word(ud,&len) != 4)
+                     ^
+tools/uart-flash-server/ufserver.c:266:26: note: The address of local variable 'len' might be accessed at non-zero index.
+        ret = read(ud, &b[i], 1);
+                         ^
+tools/uart-flash-server/ufserver.c:266:26: warning: The address of local variable 'address' might be accessed at non-zero index. [objectIndex]
+        ret = read(ud, &b[i], 1);
+                         ^
+tools/uart-flash-server/ufserver.c:308:22: note: Address of variable taken here.
+    if (read_word(ud,&address) != 4)
+                     ^
+tools/uart-flash-server/ufserver.c:308:22: note: Calling function 'read_word', 2nd argument '&address' value is lifetime=address
+    if (read_word(ud,&address) != 4)
+                     ^
+tools/uart-flash-server/ufserver.c:266:26: note: The address of local variable 'address' might be accessed at non-zero index.
+        ret = read(ud, &b[i], 1);
+                         ^
+tools/uart-flash-server/ufserver.c:266:26: warning: The address of local variable 'len' might be accessed at non-zero index. [objectIndex]
+        ret = read(ud, &b[i], 1);
+                         ^
+tools/uart-flash-server/ufserver.c:310:22: note: Address of variable taken here.
+    if (read_word(ud,&len) != 4)
+                     ^
+tools/uart-flash-server/ufserver.c:310:22: note: Calling function 'read_word', 2nd argument '&len' value is lifetime=len
+    if (read_word(ud,&len) != 4)
+                     ^
+tools/uart-flash-server/ufserver.c:266:26: note: The address of local variable 'len' might be accessed at non-zero index.
+        ret = read(ud, &b[i], 1);
+                         ^
+tools/uart-flash-server/ufserver.c:266:26: warning: The address of local variable 'address' might be accessed at non-zero index. [objectIndex]
+        ret = read(ud, &b[i], 1);
+                         ^
+tools/uart-flash-server/ufserver.c:335:22: note: Address of variable taken here.
+    if (read_word(ud,&address) != 4)
+                     ^
+tools/uart-flash-server/ufserver.c:335:22: note: Calling function 'read_word', 2nd argument '&address' value is lifetime=address
+    if (read_word(ud,&address) != 4)
+                     ^
+tools/uart-flash-server/ufserver.c:266:26: note: The address of local variable 'address' might be accessed at non-zero index.
+        ret = read(ud, &b[i], 1);
+                         ^
+tools/uart-flash-server/ufserver.c:266:26: warning: The address of local variable 'len' might be accessed at non-zero index. [objectIndex]
+        ret = read(ud, &b[i], 1);
+                         ^
+tools/uart-flash-server/ufserver.c:337:22: note: Address of variable taken here.
+    if (read_word(ud,&len) != 4)
+                     ^
+tools/uart-flash-server/ufserver.c:337:22: note: Calling function 'read_word', 2nd argument '&len' value is lifetime=len
+    if (read_word(ud,&len) != 4)
+                     ^
+tools/uart-flash-server/ufserver.c:266:26: note: The address of local variable 'len' might be accessed at non-zero index.
+        ret = read(ud, &b[i], 1);
+                         ^
+tools/uart-flash-server/ufserver.c:80:17: style: The statement 'if (cur_msg!=msg) cur_msg=msg' is logically equivalent to 'cur_msg=msg'. [duplicateConditionalAssign]
+    if (cur_msg != msg) {
+                ^
+tools/uart-flash-server/ufserver.c:81:17: note: Assignment 'cur_msg=msg'
+        cur_msg = msg;
+                ^
+tools/uart-flash-server/ufserver.c:80:17: note: Condition 'cur_msg!=msg' is redundant
+    if (cur_msg != msg) {
+                ^
+tools/uart-flash-server/ufserver.c:264:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+tools/uart-flash-server/ufserver.c:359:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret = 0;
+        ^
+tools/uart-flash-server/ufserver.c:396:22: style: The scope of the variable 'v' can be reduced. [variableScope]
+            uint32_t v;
+                     ^
+tools/uart-flash-server/ufserver.c:459:14: style: The scope of the variable 'base_fw_ver' can be reduced. [variableScope]
+    uint32_t base_fw_ver = 0;
+             ^
+tools/uart-flash-server/ufserver.c:359:13: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+    int ret = 0;
+            ^
+tools/uart-flash-server/ufserver.c:459:26: style: Variable 'base_fw_ver' is assigned a value that is never used. [unreadVariable]
+    uint32_t base_fw_ver = 0;
+                         ^
+tools/unit-tests/unit-extflash.c:99:5: portability: %p in format string (no. 1) requires an address but the argument type is 'uintptr_t {aka unsigned long}'. [invalidPrintfArgType_p]
+    printf("Called ext_flash_read %p %p %d\n", address, data, len);
+    ^
+tools/unit-tests/unit-extflash.c:111:5: portability: %p in format string (no. 1) requires an address but the argument type is 'uintptr_t {aka unsigned long}'. [invalidPrintfArgType_p]
+    printf("Called ext_flash_write %p %p %d\n", address, data, len);
+    ^
+tools/unit-tests/unit-extflash.c:230:21: style: Unused variable: eres [unusedVariable]
+    int rres, wres, eres;
+                    ^
+tools/unit-tests/unit-parser.c:130:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+src/image.c:876:17: error: Null pointer dereference: dts_addr [ctunullpointer]
+    memcpy(hdr, dts_addr, 2 * sizeof(uint32_t));
+                ^
+src/image.c:921:21: note: Assignment 'image=(uint8_t*)0', assigned value is 0
+
+                    ^
+src/image.c:924:36: note: Calling function wolfBoot_get_dts_size, 1st argument is null
+        ret = wolfBoot_get_dts_size(image);
+                                   ^
+src/image.c:876:17: note: Dereferencing argument dts_addr that is null
+    memcpy(hdr, dts_addr, 2 * sizeof(uint32_t));
+                ^
+hal/kinetis.c:139:0: style: The function 'CLOCK_CONFIG_FllStableDelay' is never used. [unusedFunction]
+
+^
+hal/stm32l4.c:264:0: style: The function 'HAL_GetTick' is never used. [unusedFunction]
+
+^
+hal/stm32wb.c:334:0: style: The function 'HAL_PKA_MspInit' is never used. [unusedFunction]
+
+^
+src/xmalloc.c:338:0: style: The function 'XFREE' is never used. [unusedFunction]
+
+^
+src/xmalloc.c:321:0: style: The function 'XMALLOC' is never used. [unusedFunction]
+
+^
+hal/kinetis.c:52:0: style: The function '__assert_func' is never used. [unusedFunction]
+
+^
+src/boot_riscv.c:47:0: style: The function '_reset' is never used. [unusedFunction]
+
+^
+src/libwolfboot.c:1059:0: style: The function 'aes_init' is never used. [unusedFunction]
+
+^
+src/libwolfboot.c:1095:0: style: The function 'aes_set_iv' is never used. [unusedFunction]
+
+^
+src/boot_aarch64.c:36:0: style: The function 'boot_entry_C' is never used. [unusedFunction]
+
+^
+src/libwolfboot.c:1025:0: style: The function 'chacha_init' is never used. [unusedFunction]
+
+^
+hal/hifive1.c:209:0: style: The function 'delay_ms' is never used. [unusedFunction]
+
+^
+hal/x86_64_efi.c:243:0: style: The function 'efi_main' is never used. [unusedFunction]
+
+^
+src/libwolfboot.c:1212:0: style: The function 'ext_flash_decrypt_read' is never used. [unusedFunction]
+
+^
+src/libwolfboot.c:1146:0: style: The function 'ext_flash_encrypt_write' is never used. [unusedFunction]
+
+^
+hal/hifive1.c:546:0: style: The function 'fespi_flash_probe' is never used. [unusedFunction]
+
+^
+hal/hifive1.c:343:0: style: The function 'fespi_wait_write_disabled' is never used. [unusedFunction]
+
+^
+src/spi_flash.c:97:0: style: The function 'flash_write_disable' is never used. [unusedFunction]
+
+^
+src/image.c:445:0: style: The function 'get_img_hdr' is never used. [unusedFunction]
+
+^
+src/libwolfboot.c:335:0: style: The function 'get_trailer_at' is never used. [unusedFunction]
+
+^
+hal/stm32l5.c:602:0: style: The function 'gtzc_init' is never used. [unusedFunction]
+
+^
+IDE/Renesas/e2studio/RA6M4/app_RA/src/hal_entry.c:14:0: style: The function 'hal_entry' is never used. [unusedFunction]
+
+^
+hal/nxp_p1021.c:718:0: style: The function 'hal_flash_read_status' is never used. [unusedFunction]
+
+^
+hal/raspi3.c:84:0: style: The function 'hal_get_dts_update_address' is never used. [unusedFunction]
+
+^
+hal/raspi3.c:39:0: style: The function 'hal_get_primary_address' is never used. [unusedFunction]
+
+^
+hal/raspi3.c:44:0: style: The function 'hal_get_update_address' is never used. [unusedFunction]
+
+^
+src/boot_ppc.c:70:0: style: The function 'invalidate_tlb' is never used. [unusedFunction]
+
+^
+src/string.c:68:0: style: The function 'isalpha' is never used. [unusedFunction]
+
+^
+test-app/startup_riscv.c:75:0: style: The function 'isr_synctrap' is never used. [unusedFunction]
+
+^
+test-app/led.c:227:0: style: The function 'led_off' is never used. [unusedFunction]
+
+^
+hal/stm32l5.c:672:0: style: The function 'led_unsecure' is never used. [unusedFunction]
+
+^
+hal/stm32f7.c:446:0: style: The function 'mass_erase' is never used. [unusedFunction]
+
+^
+hal/nxp_p1021.c:1018:0: style: The function 'read_io_pin' is never used. [unusedFunction]
+
+^
+src/boot_riscv.c:42:0: style: The function 'reloc_iv' is never used. [unusedFunction]
+
+^
+src/libwolfboot.c:348:0: style: The function 'set_partition_magic' is never used. [unusedFunction]
+
+^
+src/libwolfboot.c:341:0: style: The function 'set_trailer_at' is never used. [unusedFunction]
+
+^
+src/qspi_flash.c:363:0: style: The function 'spi_flash_sector_erase' is never used. [unusedFunction]
+
+^
+src/qspi_flash.c:425:0: style: The function 'spi_flash_write' is never used. [unusedFunction]
+
+^
+src/string.c:114:0: style: The function 'strcasecmp' is never used. [unusedFunction]
+
+^
+src/string.c:87:0: style: The function 'strcat' is never used. [unusedFunction]
+
+^
+src/string.c:196:0: style: The function 'strcpy' is never used. [unusedFunction]
+
+^
+src/string.c:131:0: style: The function 'strncasecmp' is never used. [unusedFunction]
+
+^
+src/string.c:151:0: style: The function 'strncat' is never used. [unusedFunction]
+
+^
+IDE/Renesas/e2studio/RA6M4/app_RA/src/hal_entry.c:59:0: style: The function 'template_nonsecure_callable' is never used. [unusedFunction]
+
+^
+src/string.c:58:0: style: The function 'tolower' is never used. [unusedFunction]
+
+^
+src/string.c:63:0: style: The function 'toupper' is never used. [unusedFunction]
+
+^
+src/string.c:365:0: style: The function 'uart_printf' is never used. [unusedFunction]
+
+^
+hal/cc26x2.c:36:0: style: The function 'uart_read_nonblock' is never used. [unusedFunction]
+
+^
+test-app/app_stm32f7.c:311:0: style: The function 'usr_led_off' is never used. [unusedFunction]
+
+^
+src/libwolfboot.c:998:0: style: The function 'wolfBoot_erase_encrypt_key' is never used. [unusedFunction]
+
+^
+src/libwolfboot.c:758:0: style: The function 'wolfBoot_get_blob_diffbase_version' is never used. [unusedFunction]
+
+^
+src/libwolfboot.c:734:0: style: The function 'wolfBoot_get_blob_type' is never used. [unusedFunction]
+
+^
+src/image.c:806:0: style: The function 'wolfBoot_tpm2_deinit' is never used. [unusedFunction]
+
+^
+test-app/hifive1_write_page.c:26:0: style: The function 'write_page' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
